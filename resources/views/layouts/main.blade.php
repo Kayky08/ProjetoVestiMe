@@ -56,9 +56,9 @@
                     <h4 class="text-center text-3xl pl-10 pr-10 pt- pb-1 border-4">Nossa Loja</h4>
 
                     <ul class="text-center m-5 text-lg">
-                        <li class="m-2"><a href="">Sobre Nós</a></li>
-                        <li class="m-2"><a href="">Cadastro/Login</a></li>
-                        <li class="m-2"><a href="">SAC</a></li>
+                        <li class="m-2 hover:underline"><a href="">Sobre Nós</a></li>
+                        <li class="m-2 hover:underline"><a href="">Cadastro/Login</a></li>
+                        <li class="m-2 hover:underline"><a href="">SAC</a></li>
                     </ul>
                 </div>
 
@@ -66,9 +66,9 @@
                     <h4 class="text-center text-3xl pl-10 pr-10 pt-2 pb-2 border-4">Termos e Condições</h4>
 
                     <ul class="text-center m-5 text-lg">
-                        <li class="m-2"><a href="">Politica da Loja</a></li>
-                        <li class="m-2"><a href="">Envio e devolução</a></li>
-                        <li class="m-2"><a href="">Metodos de Pagamento</a></li>
+                        <li class="m-2 hover:underline"><a href="">Politica da Loja</a></li>
+                        <li class="m-2 hover:underline"><a href="">Envio e devolução</a></li>
+                        <li class="m-2 hover:underline"><a href="">Metodos de Pagamento</a></li>
                     </ul>
                 </div>
 
@@ -76,9 +76,9 @@
                     <h4 class="text-center text-3xl pl-10 pr-10 pt-1 pb-1 border-4">Midias Sociais</h4>
 
                     <ul class="text-center m-5 text-lg">
-                        <li class="m-2"><a href="">Instagran</a></li>
-                        <li class="m-2"><a href="">Facebook</a></li>
-                        <li class="m-2"><a href="">Twitter</a></li>
+                        <li class="m-2 hover:underline"><a href="">Instagran</a></li>
+                        <li class="m-2 hover:underline"><a href="">Facebook</a></li>
+                        <li class="m-2 hover:underline"><a href="">Twitter</a></li>
                     </ul>
                 </div>
             </div>

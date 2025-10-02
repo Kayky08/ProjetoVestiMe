@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('title','home')
+@section('title','Home')
 
 @section('content')
 
-    <section>
+    <section class="mb-25">
         <img class="w-full" src="/imgs/h-slide1.png" alt="">
         <img src="" alt="">
         <img src="" alt="">
@@ -16,14 +16,16 @@
         </div>
     </section>
 
-    <section>
+    <section class="mb-25">
         <h2 class="text-3xl text-center font-bold m-10">CATEGORIAS</h2>
 
         <div class="flex justify-between m-10 text-center">
             <div>
-                <a class="hover:text-red-400" href="">
-                    <img src="/imgs/h-perfumes.png" alt="">
-                    <p>Perfumes</p>
+                <a class="relative group overflow-hidden" href="">
+                    <img class=" w-full h-full object-cover" src="/imgs/h-perfumes.png" alt="">
+
+                    <div class="absolute inset-0 bg-black/75 flex items-center justify-center
+              text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Perfumes</div>
                 </a>
             </div>
 
@@ -43,200 +45,75 @@
         </div>
     </section>
 
-    <section>
+    <section class="mb-25">
         <h3 class="text-3xl text-center font-bold m-10">OFERTAS</h3>
 
-        <div class="flex justify-between m-10">
-            <a href="">
-                <div>
-                    <div class="relative w-65">
-                        <img src="/imgs/perfume1.svg" alt="">
-                        <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
+        <div class="flex justify-between m-10 gap-6">
+            @foreach ($products as $product)
+                @if ($product->valor >= 100)
+                <a href="">
+                    <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
+                        <div class="relative w-65">
+                            <img class="rounded" src="{{$product->img}}" alt="">
+                            <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
+                        </div>
+
+                        <div class="text-center">
+                            <p class="m-3 text-2xl">{{$product->descritivo}}</p>
+                            <p class="m-3 text-2xl font-bold">R$ {{$product->valor}}</p>
+                        </div>
                     </div>
-
-                    <div class="text-center">
-                        <p class="m-3 text-2xl">Nome do Produto</p>
-                        <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                    </div>
-                </div>
-            </a>
-            
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-        </div>
+                </a>
+                @endif
+            @endforeach
+        <div>
     </section>
 
-    <section>
+    <section class="mb-25">
         <h3 class="text-3xl text-center font-bold m-10">MAIS VENDIDOS</h3>
 
-        <div class="flex justify-between m-10">
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
+        <div class="flex justify-between m-10 gap-6">
+            @foreach ($products as $product)
+                @if ($product->valor >= 100)
+                <a href="">
+                    <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
+                        <div class="relative w-65">
+                            <img class="rounded" src="{{$product->img}}" alt="">
+                            <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
+                        </div>
 
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-        </div>
+                        <div class="text-center">
+                            <p class="m-3 text-2xl">{{$product->descritivo}}</p>
+                            <p class="m-3 text-2xl font-bold">R$ {{$product->valor}}</p>
+                        </div>
+                    </div>
+                </a>
+                @endif
+            @endforeach
+        <div>
     </section>
 
-    <section>
-        <h3 class="text-3xl text-center font-bold m-10">SUSGESTÕES PRA VOCê</h3>
+    <section class="mb-25">
+        <h3 class="text-3xl text-center font-bold m-10">SUSGESTÕES PRA VOCÊ</h3>
 
-        <div class="flex justify-between m-10">
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
+        <div class="flex justify-between m-10 gap-6">
+            @foreach ($products as $product)
+                @if ($product->valor >= 100)
+                <a href="">
+                    <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
+                        <div class="relative w-65">
+                            <img class="rounded" src="{{$product->img}}" alt="">
+                            <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
+                        </div>
 
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-            <div>
-                <div class="relative w-65">
-                    <img src="/imgs/perfume1.svg" alt="">
-                    <img class="absolute right-3 top-8 -translate-y-1/2" src="/imgs/sacola.svg" alt="">
-                </div>
-
-                <div class="text-center">
-                    <p class="m-3 text-2xl">Nome do Produto</p>
-                    <p class="m-3 text-2xl font-bold">R$ 50,00</p>
-                </div>
-            </div>
-        </div>
+                        <div class="text-center">
+                            <p class="m-3 text-2xl">{{$product->descritivo}}</p>
+                            <p class="m-3 text-2xl font-bold">R$ {{$product->valor}}</p>
+                        </div>
+                    </div>
+                </a>
+                @endif
+            @endforeach
+        <div>
     </section>
 @endsection
