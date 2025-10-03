@@ -25,8 +25,8 @@
 
                 <div class="w-100">
                     <ul class="flex justify-around">
-                        <li><a href="">CATEGORIAS</a></li>
-                        <li><a href="">SAC</a></li>
+                        <li><a href="">SERVIÇOS</a></li>
+                        <li><a href="">SOBRE</a></li>
                         <li><a href="">CONTATO</a></li>
                     </ul>
                 </div>
