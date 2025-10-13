@@ -19,7 +19,7 @@
     <section class="mb-25">
         <h2></h2>
 
-        <div class="flex">
+        <div class="flex jutify-around">
             <div>
                 <img class="w-full h-full" src="/imgs/exposicao.png" alt="Clássicos da Moda">
 
@@ -41,7 +41,13 @@
     </section>
 
     <section class="mb-25">
-        
+        <h2>SEU ESTILO FALA MAIS ALTO</h2>
+
+        <div class="flex w-full bg-red-400">
+            <img class="w-full h-250" src="/imgs/h-street.svg" alt="">
+            <img class="w-full h-250" src="/imgs/h-luxo.svg" alt="">
+            <img class="w-full h-250" src="/imgs/h-casual.svg" alt="">
+        </div>
     </section>
 
 

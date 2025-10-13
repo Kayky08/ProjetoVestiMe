@@ -19,15 +19,15 @@
     <main>
         <header class="bg-[#7E9796] text-white">
             <nav class="flex justify-around items-center p-2">
-                <a href="">
+                <a href="/">
                     <img src="/imgs/logo.svg" alt="">
                 </a>
 
                 <div class="w-100">
                     <ul class="flex justify-around">
-                        <li><a href="">SERVIÇOS</a></li>
-                        <li><a href="">SOBRE</a></li>
-                        <li><a href="">CONTATO</a></li>
+                        <li><a href="/servicos">SERVIÇOS</a></li>
+                        <li><a href="/sobre">SOBRE</a></li>
+                        <li><a href="/contato">CONTATO</a></li>
                     </ul>
                 </div>
 
