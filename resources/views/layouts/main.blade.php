@@ -25,7 +25,7 @@
 
                 <div class="w-100">
                     <ul class="flex justify-around">
-                        <li><a href="/servicos">SERVIÇOS</a></li>
+                        <li><a href="/produtos">PRODUTOS</a></li>
                         <li><a href="/sobre">SOBRE</a></li>
                         <li><a href="/contato">CONTATO</a></li>
                     </ul>
@@ -51,7 +51,7 @@
         @yield('content')
 
         <footer class="bg-[#7E9796] p-5 text-white">
-            <div class="flex justify-around ">
+            <div class="lg:flex lg:justify-around sm:grid sm:grid-cols-1 sm:w-full sm:gap-0">
                 <div>
                     <h4 class="text-center text-3xl pl-10 pr-10 pt- pb-1 border-4">Nossa Loja</h4>
 
