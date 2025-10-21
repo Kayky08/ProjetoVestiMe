@@ -25,6 +25,7 @@
 
                 <div class="w-100">
                     <ul class="flex justify-around">
+                        <li><a href="/">HOME</a></li>
                         <li><a href="/produtos">PRODUTOS</a></li>
                         <li><a href="/sobre">SOBRE</a></li>
                         <li><a href="/contato">CONTATO</a></li>
@@ -37,7 +38,7 @@
                 </div>
 
                 <div class="w-50 flex justify-around">
-                    <a href="" class="flex justify-around items-center">
+                    <a href="/login" class="flex justify-around items-center">
                         <img src="/imgs/login.svg" alt="">
                     </a>
 

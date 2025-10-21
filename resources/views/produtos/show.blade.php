@@ -1,49 +1,40 @@
-@extends("layouts.main")
+@extends('layouts.main')
 
-@section('title', 'Produtos')
+@section('title', $product->descritivo)
 
 @section('content')
 
-<section class="flex flex-col justify-center items-center">
-    <h1 class="text-[#7E9796] font-bold text-center text-5xl m-10">Produtos</h1>
+<section class="flex justify-around items-center ">
     
-    <div class="flex flex-col justify-center items-center">
-        <div class="w-350">
-            <div class="flex justify-around w-full bg-[#7E9796] p-5 m-10 rounded-full">
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
+    <div class="grid grid-cols-3 bg-[#EAEAEA] rounded-2xl m-10 p-5 w-300">
+        <img class="w-100 col-span-2 m-10" src="{{$product->img}}" alt="">
 
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
+        <div class="flex flex-col m-5">
+            <p class="text-4xl">{{$product->descritivo}}</p>
+            <p class="text-xl font-bold text-[#8A8A8A]">Código: {{$product->id}}</p>
+            <p class="text-3xl font-bold mt-5 mb-5">R$ {{$product->valor}}</p>
 
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
-
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
+            <div class="flex flex-col">
+                <label for="quantudade">Quantidade</label>
+                <select class="bg-white h-10 w-15 text-center rounded-full" name="" id="">
+                    @for ($i = 1; $i < $product->qtd; $i++)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
                 </select>
             </div>
-        </div>
 
-        <div class="grid grid-cols-4 gap-5 mb-10">
+            <a class="bg-[#7E9796] mt-50 p-3 rounded-full text-white font-bold text-center text-3xl" href="">COMPRAR</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>SUSGESTÕES PARA VOCÊ</h2>
+
+    <div class="flex justify-between items-center m-10 gap-6 overflow-x-auto h-150">
             @foreach ($products as $product)
                 @if ($product->valor >= 100)
-                <a href="">
+                <a href="/produto/{{$product->id}}">
                     <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
                         <div class="relative w-65">
                             <img class="rounded" src="{{$product->img}}" alt="">

@@ -38,7 +38,7 @@
         <div class="flex justify-between items-center m-10 gap-6 overflow-x-auto h-150">
             @foreach ($products as $product)
                 @if ($product->valor >= 100)
-                <a href="">
+                <a href="/produto/{{$product->id}}">
                     <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
                         <div class="relative w-65">
                             <img class="rounded" src="{{$product->img}}" alt="">

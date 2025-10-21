@@ -1,32 +1,49 @@
-@extends('layout.main')
+@extends("layouts.main")
 
-@section('title', $product->descritivo)
+@section('title', 'Produtos')
 
 @section('content')
 
-<section>
-    <div>
-        <img src="" alt="">
+<section class="flex flex-col justify-center items-center">
+    <h1 class="text-[#7E9796] font-bold text-center text-5xl m-10">Produtos</h1>
+    
+    <div class="flex flex-col justify-center items-center">
+        <div class="w-350">
+            <div class="flex justify-around w-full bg-[#7E9796] p-5 m-10 rounded-full">
+                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
+                    <option value="0">CATEGORIA</option>
+                    <option value="">ROUPAS</option>
+                    <option value="">ACESSORIOS</option>
+                    <option value="">CALÇADOS</option>
+                </select>
 
-        <p></p>
-        <p>Código:</p>
-        <p></p>
+                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
+                    <option value="0">CATEGORIA</option>
+                    <option value="">ROUPAS</option>
+                    <option value="">ACESSORIOS</option>
+                    <option value="">CALÇADOS</option>
+                </select>
 
-        <select name="" id="">
+                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
+                    <option value="0">CATEGORIA</option>
+                    <option value="">ROUPAS</option>
+                    <option value="">ACESSORIOS</option>
+                    <option value="">CALÇADOS</option>
+                </select>
 
-        </select>
+                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
+                    <option value="0">CATEGORIA</option>
+                    <option value="">ROUPAS</option>
+                    <option value="">ACESSORIOS</option>
+                    <option value="">CALÇADOS</option>
+                </select>
+            </div>
+        </div>
 
-        <button>Comprar</button>
-    </div>
-</section>
-
-<section>
-    <h2>SUSGESTÕES PARA VOCÊ</h2>
-
-    <div class="flex justify-between items-center m-10 gap-6 overflow-x-auto h-150">
+        <div class="grid grid-cols-4 gap-5 mb-10">
             @foreach ($products as $product)
                 @if ($product->valor >= 100)
-                <a href="">
+                <a href="/produto/{{$product->id}}">
                     <div class="p-5 hover:bg-[#D9D9D9] rounded-2xl transition delay-75 hover:scale-110">
                         <div class="relative w-65">
                             <img class="rounded" src="{{$product->img}}" alt="">
