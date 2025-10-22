@@ -42,7 +42,7 @@
                         <img src="/imgs/login.svg" alt="">
                     </a>
 
-                    <a href="">
+                    <a href="/carrinho">
                         <img src="/imgs/sacola.svg" alt="">
                     </a>
                 </div>

@@ -9,7 +9,7 @@
     <div class="grid grid-cols-3 bg-[#EAEAEA] rounded-2xl m-10 p-5 w-300">
         <img class="w-100 col-span-2 m-10" src="{{$product->img}}" alt="">
 
-        <div class="flex flex-col m-5">
+        <form action="" method="GET" class="flex flex-col m-5">
             <p class="text-4xl">{{$product->descritivo}}</p>
             <p class="text-xl font-bold text-[#8A8A8A]">Código: {{$product->id}}</p>
             <p class="text-3xl font-bold mt-5 mb-5">R$ {{$product->valor}}</p>
@@ -23,8 +23,8 @@
                 </select>
             </div>
 
-            <a class="bg-[#7E9796] mt-50 p-3 rounded-full text-white font-bold text-center text-3xl" href="">COMPRAR</a>
-        </div>
+            <button type="submit" class="bg-[#7E9796] mt-50 p-3 rounded-full text-white font-bold text-center text-3xl" href="/carrinho/adicionar/{{$product->id}}">COMPRAR</button>
+        </form>
     </div>
 </section>
 
