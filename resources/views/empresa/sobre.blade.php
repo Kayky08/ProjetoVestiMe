@@ -7,7 +7,7 @@
 <section class="flex flex-col justify-center items-center m-25">
     <h1 class="text-[#7E9796] font-bold text-center text-5xl m-10">SOBRE</h1>
 
-    <div class="bg-[#D9D9D9] w-300 p-10 rounded-2xl">
+    <div class=" bg-[#D9D9D9] w-300 p-10 rounded-2xl">
         <div class="flex">
             <img class="m-5" src="/imgs/missao.png" alt="">
             

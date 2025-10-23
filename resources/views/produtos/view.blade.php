@@ -8,39 +8,13 @@
     <h1 class="text-[#7E9796] font-bold text-center text-5xl m-10">Produtos</h1>
     
     <div class="flex flex-col justify-center items-center">
-        <div class="w-350">
+        <div class="lg:w-350 sm:w-150">
             <div class="flex justify-around w-full bg-[#7E9796] p-5 m-10 rounded-full">
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
-
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
-
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
-
-                <select class="bg-white p-2 rounded-2xl w-50" name="" id="">
-                    <option value="0">CATEGORIA</option>
-                    <option value="">ROUPAS</option>
-                    <option value="">ACESSORIOS</option>
-                    <option value="">CALÇADOS</option>
-                </select>
+                
             </div>
         </div>
 
-        <div class="grid grid-cols-4 gap-5 mb-10">
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 mb-10">
             @foreach ($products as $product)
                 @if ($product->valor >= 100)
                 <a href="/produto/{{$product->id}}">
@@ -52,7 +26,7 @@
 
                         <div class="text-center">
                             <p class="m-3 text-2xl">{{$product->descritivo}}</p>
-                            <p class="m-3 text-2xl font-bold">R$ {{$product->valor}}</p>
+                            <p class="m-3 text-2xl font-bold">R$ {{number_format($product->valor, 2, ',', '.')}}</p>
                         </div>
                     </div>
                 </a>

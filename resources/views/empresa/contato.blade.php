@@ -7,7 +7,7 @@
 <section class="flex flex-col justify-center items-center m-25">
     <h1 class="text-[#7E9796] font-bold text-center text-5xl m-10">CONTATO</h1>
 
-    <div class="bg-[#EAEAEA] p-3 flex justify-around items-center w-300 rounded-2xl">
+    <div class="bg-[#EAEAEA] p-3 lg:flex justify-around items-center sm:grid sm:grid-cols-1 lg:w-300 sm:w-150 rounded-2xl">
         <form action="" class="flex items-center flex-col w-100">
             <div class="flex m-3">
                 <img class="m-3" src="/imgs/email.svg" alt="">

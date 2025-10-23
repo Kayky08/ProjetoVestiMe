@@ -9,21 +9,23 @@
     <div class="grid grid-cols-3 bg-[#EAEAEA] rounded-2xl m-10 p-5 w-300">
         <img class="w-100 col-span-2 m-10" src="{{$product->img}}" alt="">
 
-        <form action="" method="GET" class="flex flex-col m-5">
+        <form action="{{ route('cart.add', $product->id) }}" method="POST" class="flex flex-col m-5">
+            @csrf
+
             <p class="text-4xl">{{$product->descritivo}}</p>
             <p class="text-xl font-bold text-[#8A8A8A]">Código: {{$product->id}}</p>
-            <p class="text-3xl font-bold mt-5 mb-5">R$ {{$product->valor}}</p>
+            <p class="text-3xl font-bold mt-5 mb-5">R$ {{number_format($product->valor, 2, ',', '.')}}</p>
 
             <div class="flex flex-col">
-                <label for="quantudade">Quantidade</label>
-                <select class="bg-white h-10 w-15 text-center rounded-full" name="" id="">
+                <label for="quantidade">Quantidade</label>
+                <select class="bg-white h-10 w-15 text-center rounded-full" name="qtd" id="">
                     @for ($i = 1; $i < $product->qtd; $i++)
                         <option value="{{$i}}">{{$i}}</option>
                     @endfor
                 </select>
             </div>
 
-            <button type="submit" class="bg-[#7E9796] mt-50 p-3 rounded-full text-white font-bold text-center text-3xl" href="/carrinho/adicionar/{{$product->id}}">COMPRAR</button>
+            <button type="submit" class="bg-[#7E9796] mt-50 p-3 rounded-full text-white font-bold text-center text-3xl">COMPRAR</button>
         </form>
     </div>
 </section>
@@ -43,7 +45,7 @@
 
                         <div class="text-center">
                             <p class="m-3 text-2xl">{{$product->descritivo}}</p>
-                            <p class="m-3 text-2xl font-bold">R$ {{$product->valor}}</p>
+                            <p class="m-3 text-2xl font-bold">R$ {{number_format($product->valor, 2, ',', '.')}}</p>
                         </div>
                     </div>
                 </a>

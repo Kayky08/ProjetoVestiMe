@@ -12,7 +12,7 @@
 <body>
     <section class="flex justify-between bg-[#7E9796]">
         <div>
-            <img class="h-full" src="/imgs/exposicao3.png" alt="">
+            <img class="h-full" src="/imgs/exposicao3.svg" alt="">
         </div>
 
         <div class="text-center flex flex-col justify-center items-center bg-[#7E9796] w-150 mr-75 p-15 rounded-4xl">
